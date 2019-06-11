@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="author" content="www.frebsite.nl" />
+		<meta name="viewport" content="width=device-width initial-scale=1.0 maximum-scale=1.0 user-scalable=yes" />
+
+		<title>ADMI</title>
+
+		<link type="text/css" rel="stylesheet" href="dist/css/demo.css" />
+		<link type="text/css" rel="stylesheet" href="dist/mmenu.css" />
+
+		<!-- IE 10 and 11 polyfills -->
+		<script src="https://polyfill.io/v3/polyfill.min.js?flags=gated&features=Array.prototype.filter%2CArray.prototype.forEach%2CArray.prototype.map%2CElement.prototype.cloneNode%2Cdocument.querySelector"></script>
+	</head>
+	<body>
+		<div id="page">
+			<div class="header">
+				<a href="#menu"><span></span></a>
+				ADMI
+			</div>
+
+			<div class="content">
+				<div id="slider">
+					<figure>
+						<img src="dist/img/1.jpg">
+						<img src="dist/img/2.jpg">
+						<img src="dist/img/3.jpg">
+						<img src="dist/img/1.jpg">
+						<img src="dist/img/2.jpg">
+					</figure>
+				</div>
+
+			</div>
+
+			<nav id="menu">
+				<ul>
+					<li><a href="index.html">Home</a></li>
+					<li><span>A Igreja</span>
+						<ul>
+							<li><a href="historia.html">Historia</a></li>
+							<li><a href="lideranca.html">Liderança</a></li>
+							<li><a href="louvor.html">Ministério de Louvor</a></li>
+							<li><a href="jovens.html">Ministério de Jovens</a></li>
+						</ul>
+					</li>
+					<li><span>Galeria</span>
+						<ul>
+							<li><a href="fotos.html">Fotos</a></li>
+							<li><a href="videos.html">Vídeos</a></li>
+							<li><a href="musicas.html">Músicas</a></li>
+							<li><a href="estudos.html">Estudos</a></li>
+						</ul>
+					</li>
+					<li><a href="contato.html">Contato</a></li>
+				</ul>
+			</nav>
+		</div>
+   
+
+    <div class="wrap">
+
+        <!-- Principal Section with the gallery code. If you want use only gallery code,
+             you can copy all code bellow, with gallery-container.-->
+        <section class="container gallery-container">
+
+            <!--Slide-->
+            <div class="mySlides fade"> <!-- 01 -->
+                <div class="numbertext">2019</div>
+                <img class="imgslide" src="dist/img/fotos/1.jpg" alt="Arara Azul"/>
+                <div class="text">Evento</div>
+            </div>
+
+             <div class="mySlides fade"> <!-- 01 -->
+                <div class="numbertext">2019</div>
+                <img class="imgslide" src="dist/img/fotos/2.jpg" alt="Arara Azul"/>
+                <div class="text">Evento</div>
+            </div>
+             <div class="mySlides fade"> <!-- 01 -->
+                <div class="numbertext">2019</div>
+                <img class="imgslide" src="dist/img/fotos/3.jpg" alt="Arara Azul"/>
+                <div class="text">Evento</div>
+            </div>
+             <div class="mySlides fade"> <!-- 01 -->
+                <div class="numbertext">2019</div>
+                <img class="imgslide" src="dist/img/fotos/4.jpg" alt="Arara Azul"/>
+                <div class="text">Evento</div>
+            </div>
+             <div class="mySlides fade"> <!-- 01 -->
+                <div class="numbertext">2019</div>
+                <img class="imgslide" src="dist/img/fotos/5.jpg" alt="Arara Azul"/>
+                <div class="text">Evento</div>
+            </div>
+            <!--Final Slides-->
+
+            <!--Navigation-->
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </section>
+        <!--End of galery-->
+
+        
+        <!-- end of page -->
+        <footer class="page-footer">
+            <p><a href="#">ADMI</a> | 2019</a></p>
+        </footer>
+    </div>
+
+        <footer class="footer"></footer>
+
+		<!-- mmenu scripts -->
+		<script src="dist/fotos.js"></script>
+		<script src="dist/slide.js"></script>
+		<script src="dist/mmenu.js"></script>
+		<script src="dist/src/mmenu.debugger.js"></script>
+		<script>
+			new Mmenu( document.querySelector( '#menu' ) );
+
+			document.addEventListener( 'click', ( evnt ) => {
+				let anchor = evnt.target.closest( 'a[href^="#/"]' );
+				if ( anchor ) {
+					alert('Thank you');
+					evnt.preventDefault();
+				}
+			});
+		</script>
+	</body>
+</html>

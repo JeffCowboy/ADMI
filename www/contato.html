@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="author" content="www.frebsite.nl" />
+		<meta name="viewport" content="width=device-width initial-scale=1.0 maximum-scale=1.0 user-scalable=yes" />
+
+		<title>ADMI</title>
+
+		<link type="text/css" rel="stylesheet" href="dist/css/demo.css" />
+		<link type="text/css" rel="stylesheet" href="dist/mmenu.css" />
+
+		<!-- IE 10 and 11 polyfills -->
+		<script src="https://polyfill.io/v3/polyfill.min.js?flags=gated&features=Array.prototype.filter%2CArray.prototype.forEach%2CArray.prototype.map%2CElement.prototype.cloneNode%2Cdocument.querySelector"></script>
+	</head>
+	<body>
+		<div id="page">
+			<div class="header">
+				<a href="#menu"><span></span></a>
+				ADMI
+			</div>
+
+			<div class="content">
+				<div id="slider">
+					<figure>
+						<img src="dist/img/1.jpg">
+						<img src="dist/img/2.jpg">
+						<img src="dist/img/3.jpg">
+						<img src="dist/img/1.jpg">
+						<img src="dist/img/2.jpg">
+					</figure>
+				</div>
+
+			</div>
+
+			<nav id="menu">
+				<ul>
+					<li><a href="index.html">Home</a></li>
+					<li><span>A Igreja</span>
+						<ul>
+							<li><a href="historia.html">Historia</a></li>
+							<li><a href="lideranca.html">Liderança</a></li>
+							<li><a href="louvor.html">Ministério de Louvor</a></li>
+							<li><a href="jovens.html">Ministério de Jovens</a></li>
+						</ul>
+					</li>
+					<li><span>Galeria</span>
+						<ul>
+							<li><a href="fotos.html">Fotos</a></li>
+							<li><a href="videos.html">Vídeos</a></li>
+							<li><a href="musicas.html">Músicas</a></li>
+							<li><a href="estudos.html">Estudos</a></li>
+						</ul>
+					</li>
+					<li><a href="contato.html">Contato</a></li>
+				</ul>
+			</nav>
+		</div>
+        
+        <h1 style="text-align: center;">Contato </h1>
+
+           <br>
+  
+            <p style="margin-left: 5px">Rua: 4 de janeiro Nº10 Matias Quissamã RJ</p>
+
+           <br>
+          <p style="margin-left: 5px">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d473165.7636131237!2d-41.69393710627812!3d-22.10280065597521!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xbde5777b3f217d%3A0xf744f7f81e14eb19!2sQuissam%C3%A3+-+RJ%2C+28735-000!5e0!3m2!1spt-BR!2sbr!4v1560284157950!5m2!1spt-BR!2sbr" width="100%" height="350" frameborder="0" style="border:0" allowfullscreen></iframe>
+         </p>
+
+        <!-- end of page -->
+        <footer class="page-footer">
+            <p><a href="#">ADMI</a> | 2019</a></p>
+        </footer>
+
+		<!-- mmenu scripts -->
+		<script src="dist/slide.js"></script>
+		<script src="dist/mmenu.js"></script>
+		<script src="dist/src/mmenu.debugger.js"></script>
+		<script>
+			new Mmenu( document.querySelector( '#menu' ) );
+
+			document.addEventListener( 'click', ( evnt ) => {
+				let anchor = evnt.target.closest( 'a[href^="#/"]' );
+				if ( anchor ) {
+					alert('Thank you');
+					evnt.preventDefault();
+				}
+			});
+		</script>
+	</body>
+</html>
